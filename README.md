@@ -73,8 +73,8 @@ F2 score is evaluated at every confidence level on validation dataset, so we can
 
 ## Conclusion
 1) As expected YOLOX performs better than YOLOv5.
-2) What was surprising is that the Swin Transformer didn't perform better than YOLOv5 or YOLOX. That is becuase the low number of epochs that the model was trained on, becuase mainly transformers need more time than CNNs to converge.
-3) The best approach was by ensembling, by combining both YOLOv5 and YOLOX outputs to produce a more precise output.
+2) What was surprising is that the Swin Transformer didn't perform better than YOLOv5 or YOLOX. That is becuase the low number of epochs for the finetuning, becuase mainly transformers need more time than CNNs to converge.
+3) The best approach was the ensembling method by combining both YOLOv5 and YOLOX outputs to produce a more precise output.
 
 ## Future Work
 1) Training for much more epochs.
