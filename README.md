@@ -14,7 +14,7 @@ evaluated in the same order they were recorded within each video. When the submi
 scored, the actual test data (including a sample submission) will be availabe to the notebook.
 
 ## Dataset
-![](example.jpg)
+![](example.jpg) <br/>
 This dataset contains around 23.5k training images (4.9k only containing objects) and 13k test images. <br/>
 All of the images have a size of 1280x720. <br/>
 **Files** <br/>
