@@ -27,13 +27,15 @@ train/ - Folder containing training set photos of the form video_{video_id}/{vid
 * image_id - ID code for the image, in the format '{video_id}-{video_frame}' <br/>
 annotations - The bounding boxes of any starfish detections in a string format that can be evaluated directly with Python. Does not use the same format as the predictions you will submit. Not available in test.csv. A bounding box is described by the pixel coordinate (x_min, y_min) of its upper left corner within the image together with its width and height in pixels. <br/>
 
-### `x_center` Vs `y_center`
+### Bounding Boxes Analysis
+
+#### `x_center` Vs `y_center`
 ![](xy_dist.jpg)
 
-### `width` Vs `height`
+#### `width` Vs `height`
 ![](wh_dist.jpg)
 
-### Area
+#### `Area`
 ![](area.jpg)
 
 ## Approach
