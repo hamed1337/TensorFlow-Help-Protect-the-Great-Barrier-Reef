@@ -4,11 +4,11 @@
 ## Introduction
 In this repository I introduce a solution for the kaggle competition [TensorFlow - Help Protect the Great Barrier Reef](https://www.kaggle.com/c/tensorflow-great-barrier-reef). <br/>
 The goal of this competition is to accurately identify starfish in real-time by building an object detection
-model trained on underwater videos of coral reefs.
+model trained on underwater videos of coral reefs. <br/>
 In this competition, I will predict the presence and position of crown-of-thorns starfish in sequences of
 underwater images taken at various times and locations around the Great Barrier Reef. Predictions take
 the form of a bounding box together with a confidence score for each identified starfish. An image may
-contain zero or more starfish.
+contain zero or more starfish. <br/>
 This competition uses a hidden test set that will be served by an API to ensure that the images are
 evaluated in the same order they were recorded within each video. When the submitted notebook is
 scored, the actual test data (including a sample submission) will be availabe to the notebook.
@@ -48,10 +48,12 @@ There are 4 approaches that I tried to achieve a high F2 score: <br/>
 1) Using a pretrained YOLOv5 model.
 2) Using a pretrained YOLOX model.
 3) Using a pretrained Swin Transformer model.
-4) Ensemble solution by using both YOLOv5 and YOLOX. 
+4) Ensemble solution by using both YOLOv5 and YOLOX.
+
 
 ### Training
 The three models are finetuned on the dataset for 20 epochs. <br/>
+**The hyperparameters used were the default ones recommened for finetuning by the repository publishers.**
 
 ### Ensembling Approach
 **Weighted boxes fusion (WBF) Algorithm: <br/>**
@@ -66,10 +68,10 @@ F2 score is evaluated at every confidence level on validation dataset, so we can
 
         Approach                     Max F2 Score
        
-        YOLOv5                        0.658
-        YOLOX                         0.678
-        Swin Transformer              0.608
-        YOLOv5 + YOLOX                0.692
+        YOLOv5                          0.658
+        YOLOX                           0.678
+        Swin Transformer                0.608
+        YOLOv5 + YOLOX                  0.692
 
 ## Conclusion
 1) As expected YOLOX performs better than YOLOv5.
@@ -84,8 +86,8 @@ F2 score is evaluated at every confidence level on validation dataset, so we can
 ## References
 1) https://github.com/ultralytics/yolov5
 2) https://github.com/Megvii-BaseDetection/YOLOX
-3) https://arxiv.org/abs/2107.08430
+3) [YOLOX: Exceeding YOLO Series in 2021](https://arxiv.org/abs/2107.08430)
 4) https://github.com/open-mmlab/mmdetection
-5) https://arxiv.org/abs/2103.14030
+5) [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/abs/2103.14030)
 6) https://www.kaggle.com/shonenkov/wbf-approach-for-ensemble/notebook
-8) https://arxiv.org/abs/1910.13302
+8) [Weighted boxes fusion: Ensembling boxes from different object detection models](https://arxiv.org/abs/1910.13302)
