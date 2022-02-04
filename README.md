@@ -33,6 +33,9 @@ annotations - The bounding boxes of any starfish detections in a string format t
 ### `width` Vs `height`
 ![](wh_dist.jpg)
 
+### Area
+![](area.jpg)
+
 ## Approach
 ### Data Handling
 1) For this competition the first step is to filter the images containing annotations and remove the ones with no annotations.
